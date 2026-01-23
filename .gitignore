@@ -205,3 +205,73 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ------------------------------------------------------
+#  DE ZOOMCAMP SPECIFIC ADDITIONS
+# ------------------------------------------------------
+
+# --- 1. Cloud & Secrets
+# Google Cloud Service Account Keys
+*.json
+!package.json
+!tsconfig.json
+
+# Terraform variables containing secrets
+*.tfvars
+*.tfvars.json
+
+# --- 2. Infrastructure as Code (Terraform) ---
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+override.tf
+override.tf.json
+
+# --- 3. Docker & Local Data ---
+# Postgres/Docker mounted volumes
+postgres_data/
+mysql_data/
+ny_taxi_postgres_data/
+docker-volumes/
+
+# Raw Data files
+*.csv
+*.parquet
+*.csv.gz
+*.tsv
+data/
+raw_data/
+web_to_gcs/data/
+
+# --- 4. dbt (Data Build Tool) ---
+dbt_packages/
+target/
+dbt_modules/
+logs/
+
+# --- 5. Orchestration (Mage / Airflow) ---
+# Mage specific
+.mage_data/
+mage_data/
+
+# Airflow specific
+airflow.db
+airflow.cfg
+webserver_config.py
+
+# --- 6. Editor & OS Junk ---
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
