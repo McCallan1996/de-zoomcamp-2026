@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 
-# user: postgres, password: postgres, port: 5433 (docker-compose), db: ny_taxi
+# user: postgres, password: postgres, host: postgres, port: 5432, db: ny_taxi
 db_url = 'postgresql://postgres:postgres@postgres:5432/ny_taxi'
 engine = create_engine(db_url)
 
@@ -34,10 +34,3 @@ if __name__ == '__main__':
         table_name='zones', 
         file_type='csv'
     )
-
-
-# In[ ]:
-
-
-
-
