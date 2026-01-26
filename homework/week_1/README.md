@@ -25,3 +25,18 @@ AND lpep_pickup_datetime < '2025-12-01'
 AND trip_distance <= 1;
 ```
 **Answer:** 8,007
+
+## Question 4. Longest trip for each day
+
+**SQL Query:**
+```sql
+SELECT 
+    CAST(lpep_pickup_datetime AS DATE) as pickup_date, 
+    MAX(trip_distance) as max_trip_distance 
+FROM green_taxi_trips 
+WHERE trip_distance < 100 
+GROUP BY pickup_date 
+ORDER BY max_trip_distance DESC
+LIMIT 5;
+```
+**Answer:** 2025-11-14
