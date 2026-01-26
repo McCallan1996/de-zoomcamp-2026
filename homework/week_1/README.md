@@ -56,3 +56,21 @@ ORDER BY total_amount DESC
 LIMIT 1;
 ```
 **Answer:** East Harlem North
+
+## Question 6. Largest tip
+
+**SQL Query:**
+```sql
+SELECT 
+    zdo."Zone" AS dropoff_zone,
+    MAX(tpu.tip_amount) AS max_tip 
+FROM green_taxi_trips tpu 
+JOIN zones zpu ON tpu."PULocationID" = zpu."LocationID"
+JOIN zones zdo ON tpu."DOLocationID" = zdo."LocationID"
+WHERE zpu."Zone" = 'East Harlem North' 
+AND TO_CHAR(tpu.lpep_pickup_datetime, 'MM-YYYY') = '11-2025' 
+GROUP BY dropoff_zone 
+ORDER BY max_tip DESC 
+LIMIT 1;
+```
+**Answer:** Yorkville West
