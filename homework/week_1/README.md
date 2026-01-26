@@ -74,3 +74,7 @@ ORDER BY max_tip DESC
 LIMIT 1;
 ```
 **Answer:** Yorkville West
+
+## Question 7. Terraform Workflow
+
+**Answer:** terraform init, terraform apply -auto-approve, terraform destroy
