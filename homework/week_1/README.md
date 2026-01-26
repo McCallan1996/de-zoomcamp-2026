@@ -40,3 +40,19 @@ ORDER BY max_trip_distance DESC
 LIMIT 5;
 ```
 **Answer:** 2025-11-14
+
+## Question 5. Biggest pickup zone
+
+**SQL Query:**
+```sql
+SELECT 
+    zpu."Zone", 
+    SUM(tpu.total_amount) AS total_amount 
+FROM green_taxi_trips tpu 
+JOIN zones zpu ON tpu."PULocationID" = zpu."LocationID" 
+WHERE CAST(tpu.lpep_pickup_datetime AS DATE) = '2025-11-18' 
+GROUP BY zpu."Zone"
+ORDER BY total_amount DESC 
+LIMIT 1;
+```
+**Answer:** East Harlem North
