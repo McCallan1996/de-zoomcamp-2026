@@ -1,0 +1,14 @@
+TO TURN FILE OR TEXT TO BE BASE 65
+
+1. FILE
+
+MAC = cat <secret-key.json> | base64 | tr -d '\n'
+
+WINDOWS = [Convert]::ToBase64String([IO.File]::ReadAllBytes("<secret-key.json>"))
+
+
+2. TEXT
+
+MAC = echo -n "API_KEY" | base64
+
+WINDOWS = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("API_KEY"))
