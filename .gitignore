@@ -282,9 +282,18 @@ GUIDE.md
 # Bruin credentials (contains connection secrets)
 .bruin.yml
 
+# --- 8. dlt (data load tool) ---
+# dlt secrets file (contains credentials)
+**/.dlt/secrets.toml
+# dlt working/local directories
+**/.dlt/.var/
+**/.dlt/profile-name
+
 # DuckDB database files
 *.db
 *.db.wal
+*.duckdb
+*.duckdb.wal
 
 # Bruin logs
 logs/runs/

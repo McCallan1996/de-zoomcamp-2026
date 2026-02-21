@@ -8,3 +8,4 @@ My solutions for the Data Engineering Zoomcamp 2026 cohort.
 * [Week 3: Data Warehousing & BigQuery](homework/week_3/)
 * [Week 4: Analytics Engineering with dbt](homework/week_4/)
 * [Week 5: Data Platforms with Bruin](homework/week_5/)
+* [Workshop 1: Build Your Own dlt Pipeline](homework/workshop_1/)
