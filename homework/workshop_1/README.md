@@ -18,7 +18,7 @@ SELECT
 FROM nyc_taxi.taxi_rows;
 ```
 
-**Answer:** 2009-01-01 to 2009-06-30
+**Answer:** 2009-06-01 to 2009-07-01
 
 ## Question 2. What proportion of trips were paid by Credit Card?
 
