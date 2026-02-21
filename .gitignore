@@ -277,3 +277,25 @@ ehthumbs.db
 .vscode/
 
 GUIDE.md
+
+# --- 7. Bruin Data Pipeline ---
+# Bruin credentials (contains connection secrets)
+.bruin.yml
+
+# DuckDB database files
+*.db
+*.db.wal
+
+# Bruin logs
+logs/runs/
+logs/queries/
+
+# Bruin temp/working files
+temp/
+local-backup/
+
+# Claude Code
+.claude/
+logs/runs
+logs/*.log
+*.py[cod]

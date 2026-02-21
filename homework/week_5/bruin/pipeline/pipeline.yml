@@ -1,0 +1,15 @@
+name: nyc-taxi
+
+schedule: monthly
+
+start_date: "2019-01-01"
+
+default_connections:
+  google_cloud_platform: gcp-default
+
+variables:
+  taxi_types:
+    type: array
+    items:
+      type: string
+    default: ["yellow", "green"]
