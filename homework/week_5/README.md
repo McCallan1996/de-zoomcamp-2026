@@ -10,7 +10,7 @@
 
 In a Bruin project, what are the required files/directories?
 
-**Answer:** `.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/`
+**Answer:** .bruin.yml and pipeline/ with pipeline.yml and assets/
 
 Per the docs: `.bruin.yml` in the root, `pipeline.yml` in the `pipeline/` directory, and `assets/` folder next to it.
 
@@ -18,7 +18,7 @@ Per the docs: `.bruin.yml` in the root, `pipeline.yml` in the `pipeline/` direct
 
 Which incremental strategy deletes and re-inserts data for a specific time period?
 
-**Answer:** `time_interval` - incremental based on a time column
+**Answer:** time_interval - incremental based on a time column
 
 It deletes rows in the date range then re-inserts. `append` doesn't delete, `replace` rebuilds everything, `view` stores nothing.
 
@@ -26,7 +26,7 @@ It deletes rows in the date range then re-inserts. `append` doesn't delete, `rep
 
 How do you override the `taxi_types` array variable to only process yellow taxis?
 
-**Answer:** `bruin run --var 'taxi_types=["yellow"]'`
+**Answer:** bruin run --var 'taxi_types=["yellow"]'
 
 The `--var` flag takes `key=value` format. Since `taxi_types` is an array, the value must be a JSON array. The docs example shows: `--var taxi_types='["yellow"]'`.
 
@@ -34,7 +34,7 @@ The `--var` flag takes `key=value` format. Since `taxi_types` is an array, the v
 
 How to run `ingestion/trips.py` plus all downstream assets?
 
-**Answer:** `bruin run ingestion/trips.py --downstream`
+**Answer:** bruin run ingestion/trips.py --downstream
 
 The `--downstream` flag runs the asset and everything that depends on it. The other options (`--all`, `--recursive`, `--select`) don't exist in Bruin.
 
@@ -42,15 +42,15 @@ The `--downstream` flag runs the asset and everything that depends on it. The ot
 
 Which quality check ensures `pickup_datetime` never has NULL values?
 
-**Answer:** `name: not_null`
+**Answer:** not_null: true
 
-Added under the column's `checks` list. `unique` checks uniqueness, `positive`/`non_negative` check values, `accepted_values` checks against a list.
+`unique` checks uniqueness, `positive`/`non_negative` check values, `accepted_values` checks against a list.
 
 ## Question 6. Lineage and Dependencies
 
 Which command visualizes the dependency graph?
 
-**Answer:** `bruin lineage`
+**Answer:** bruin lineage
 
 Shows upstream and downstream dependencies for assets. `bruin lineage ./pipeline/assets/ingestion/trips.py`
 
@@ -58,6 +58,6 @@ Shows upstream and downstream dependencies for assets. `bruin lineage ./pipeline
 
 What flag to use on a new DuckDB database to create tables from scratch?
 
-**Answer:** `--full-refresh`
+**Answer:** --full-refresh
 
 Truncates and rebuilds tables. The docs recommend: "Use `--full-refresh` for initial runs on new databases." The other flags (`--create`, `--init`, `--truncate`) don't exist.
