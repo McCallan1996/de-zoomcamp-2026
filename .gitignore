@@ -179,6 +179,7 @@ __marimo__/
 *secret*.json
 credentials.json
 .gcp/
+*credentials*.json
 # Note: Un-commenting *.json ignores all JSON files. Only specific secret patterns are ignored above.
 # *.json 
 
@@ -260,3 +261,18 @@ logs/queries/
 logs/runs
 logs/*.log
 *.py[cod]
+
+# --- Additional Junk Files ---
+.load_progress.json
+.python-version
+uv.lock
+
+# --- 12. Root-level files to exclude from GitHub ---
+# Explicitly ignore sensitive/local config files at the repo root
+/.bruin.yml
+/.claude/
+/logs/
+/.env
+/.envrc
+/.python-version
+/uv.lock
