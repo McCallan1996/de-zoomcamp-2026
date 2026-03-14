@@ -1,0 +1,10 @@
+[project]
+name = "hw7-streaming"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "kafka-python>=2.3.0",
+    "pandas>=3.0.1",
+    "psycopg2-binary>=2.9.11",
+    "pyarrow>=23.0.1",
+]

@@ -10,3 +10,4 @@ My solutions for the Data Engineering Zoomcamp 2026 cohort.
 * [Week 5: Data Platforms with Bruin](homework/week_5/)
 * [Workshop 1: Build Your Own dlt Pipeline](homework/workshop_1/)
 * [Week 6: Batch Processing with Spark](homework/week_6/)
+* [Week 7: Stream Processing](homework/week_7/)
